@@ -44,3 +44,6 @@ next-env.d.ts
 .DS_Store
 *.log
 .netlify
+
+deploy_key
+deploy_key.pub
