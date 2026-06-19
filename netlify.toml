@@ -1,31 +1,22 @@
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = ".next"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
+[build.environment]
+  NEXT_DISABLE_TURBOPACK = "1"
+  NODE_VERSION = "18"
 
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    Cache-Control = "public, max-age=3600"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
+[[notifications]]
+  form_name = "quote"
+  [notifications.webhook]
+    url = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=stormrestorationinsurance.com"
+    events = ["submission_created"]
 
-[[headers]]
-  for = "/llms.txt"
-  [headers.values]
-    Content-Type = "text/plain; charset=utf-8"
-    Cache-Control = "public, max-age=86400"
-
-[functions]
-  node_bundler = "esbuild"
+[[notifications]]
+  form_name = "contact"
+  [notifications.webhook]
+    url = "https://josh.jam-bot.com/social-api/api/leads/webhook/netlify?tenant=josh&site=stormrestorationinsurance.com"
+    events = ["submission_created"]

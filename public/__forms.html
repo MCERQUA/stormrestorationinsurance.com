@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Netlify Form Detection</title></head>
+  <body>
+    <!-- Hidden static forms so Netlify registers them at build time. -->
+    <form name="quote" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="quote" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="company" />
+      <input name="phone" />
+      <input name="email" />
+      <input name="state" />
+      <input name="trade" />
+      <input name="employees" />
+      <input name="revenue" />
+      <input name="coverage" />
+      <input name="states_worked" />
+      <input name="current_insurer" />
+      <textarea name="notes"></textarea>
+    </form>
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="phone" />
+      <input name="email" />
+      <input name="company" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>

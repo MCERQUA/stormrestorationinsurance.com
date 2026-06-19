@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #1e293b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-jakarta), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sora), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+@layer utilities {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+  .dot-pattern {
+    background-image: radial-gradient(
+      rgba(27, 79, 114, 0.12) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+  .dot-pattern-light {
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.16) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .diagonal-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+  .diagonal-clip-rev {
+    clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* Blog prose */
+.prose-storm {
+  color: #334155;
+  line-height: 1.75;
+}
+.prose-storm h2 {
+  font-family: var(--font-sora), sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1b4f72;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+.prose-storm h3 {
+  font-family: var(--font-sora), sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+.prose-storm p {
+  margin-bottom: 1.25rem;
+}
+.prose-storm ul {
+  margin: 1.25rem 0;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+.prose-storm ol {
+  margin: 1.25rem 0;
+  padding-left: 1.5rem;
+  list-style: decimal;
+}
+.prose-storm li {
+  margin-bottom: 0.5rem;
+}
+.prose-storm a {
+  color: #e67e22;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.prose-storm strong {
+  color: #1b4f72;
+  font-weight: 700;
+}
+.prose-storm blockquote {
+  border-left: 4px solid #e67e22;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #475569;
+}
+.prose-storm table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.prose-storm th {
+  background: #1b4f72;
+  color: white;
+  text-align: left;
+  padding: 0.6rem 0.9rem;
+}
+.prose-storm td {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.6rem 0.9rem;
+}
