@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import FadeIn from "@/components/animations/FadeIn";
+import SuccessSwitch from "@/components/SuccessSwitch";
 import { SITE } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -14,14 +15,7 @@ const labelCls = "block text-sm font-semibold text-storm-navy";
 const inputCls =
   "mt-1.5 w-full rounded-lg border border-storm-cloud bg-white px-4 py-3 text-storm-ink outline-none transition focus:border-storm-navy focus:ring-2 focus:ring-storm-navy/15";
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: Promise<{ success?: string }>;
-}) {
-  const params = await searchParams;
-  const success = params.success === "1";
-
+export default function Page() {
   return (
     <>
       <section className="relative overflow-hidden bg-storm-navy pt-32 pb-20 text-white lg:pt-40">
@@ -81,50 +75,53 @@ export default async function Page({
           </FadeIn>
 
           <FadeIn delay={0.12}>
-            {success ? (
-              <div className="rounded-2xl border border-storm-cloud bg-storm-mist p-10 text-center shadow-card">
-                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-storm-amber text-white"><Send className="h-8 w-8" /></span>
-                <h2 className="mt-5 font-heading text-2xl font-extrabold text-storm-navy">Message Sent</h2>
-                <p className="mt-3 text-storm-slate">Thanks for reaching out — we&apos;ll be in touch shortly.</p>
-              </div>
-            ) : (
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                action="/contact?success=1"
-                className="rounded-2xl border border-storm-cloud bg-storm-mist p-6 shadow-card sm:p-9"
-              >
-                <input type="hidden" name="form-name" value="contact" />
-                <p className="hidden"><label>Don&apos;t fill this out: <input name="bot-field" /></label></p>
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label className={labelCls} htmlFor="cname">Name</label>
-                    <input id="cname" name="name" required className={inputCls} placeholder="Your name" />
-                  </div>
-                  <div>
-                    <label className={labelCls} htmlFor="cphone">Phone</label>
-                    <input id="cphone" name="phone" type="tel" className={inputCls} placeholder="(480) 555-0134" />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label className={labelCls} htmlFor="cemail">Email</label>
-                    <input id="cemail" name="email" type="email" required className={inputCls} placeholder="you@company.com" />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label className={labelCls} htmlFor="ccompany">Company</label>
-                    <input id="ccompany" name="company" className={inputCls} placeholder="Your business" />
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label className={labelCls} htmlFor="cmessage">Message</label>
-                    <textarea id="cmessage" name="message" rows={4} required className={inputCls} placeholder="How can we help?" />
-                  </div>
+            <SuccessSwitch
+              success={
+                <div className="rounded-2xl border border-storm-cloud bg-storm-mist p-10 text-center shadow-card">
+                  <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-storm-amber text-white"><Send className="h-8 w-8" /></span>
+                  <h2 className="mt-5 font-heading text-2xl font-extrabold text-storm-navy">Message Sent</h2>
+                  <p className="mt-3 text-storm-slate">Thanks for reaching out — we&apos;ll be in touch shortly.</p>
                 </div>
-                <button type="submit" className="mt-7 inline-flex items-center gap-2 rounded-lg bg-storm-amber px-7 py-3 text-sm font-bold text-white shadow-[0_8px_24px_-8px_rgba(230,126,34,0.5)] transition hover:bg-storm-amber-dark">
-                  Send Message <Send className="h-4 w-4" />
-                </button>
-              </form>
-            )}
+              }
+              form={
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  action="/contact?success=1"
+                  className="rounded-2xl border border-storm-cloud bg-storm-mist p-6 shadow-card sm:p-9"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden"><label>Don&apos;t fill this out: <input name="bot-field" /></label></p>
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <div>
+                      <label className={labelCls} htmlFor="cname">Name</label>
+                      <input id="cname" name="name" required className={inputCls} placeholder="Your name" />
+                    </div>
+                    <div>
+                      <label className={labelCls} htmlFor="cphone">Phone</label>
+                      <input id="cphone" name="phone" type="tel" className={inputCls} placeholder="(480) 555-0134" />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label className={labelCls} htmlFor="cemail">Email</label>
+                      <input id="cemail" name="email" type="email" required className={inputCls} placeholder="you@company.com" />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label className={labelCls} htmlFor="ccompany">Company</label>
+                      <input id="ccompany" name="company" className={inputCls} placeholder="Your business" />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label className={labelCls} htmlFor="cmessage">Message</label>
+                      <textarea id="cmessage" name="message" rows={4} required className={inputCls} placeholder="How can we help?" />
+                    </div>
+                  </div>
+                  <button type="submit" className="mt-7 inline-flex items-center gap-2 rounded-lg bg-storm-amber px-7 py-3 text-sm font-bold text-white shadow-[0_8px_24px_-8px_rgba(230,126,34,0.5)] transition hover:bg-storm-amber-dark">
+                    Send Message <Send className="h-4 w-4" />
+                  </button>
+                </form>
+              }
+            />
           </FadeIn>
         </div>
       </section>
