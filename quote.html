@@ -422,7 +422,130 @@
           <p class="form-legal">
             By submitting this form you agree to be contacted by a licensed agent. We never sell your information.
           </p>
-        </form>
+        
+<!-- complete contractor field set — forms-required-fields.json -->
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Street address</label>
+          <input type="text" name="street_address">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">City</label>
+          <input type="text" name="city">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">ZIP code</label>
+          <input type="text" name="zip">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Prior year gross sales</label>
+          <input type="text" name="prior_year_gross_sales">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Prior year subcontractor expenses</label>
+          <input type="text" name="prior_year_subcontractor_expenses">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Prior year employee count</label>
+          <input type="number" name="prior_year_employee_count">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Prior year employee payroll</label>
+          <input type="text" name="prior_year_employee_payroll">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Estimated gross sales (next 12 months)</label>
+          <input type="text" name="estimated_gross_sales">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Estimated subcontractor expenses (next 12 months)</label>
+          <input type="text" name="estimated_subcontractor_expenses">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Estimated employee count (year total)</label>
+          <input type="number" name="estimated_employee_count">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Estimated employee annual payroll</label>
+          <input type="text" name="estimated_employee_payroll">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Estimated material costs</label>
+          <input type="text" name="estimated_material_costs">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Do your subcontractors have insurance?</label>
+          <select name="subcontractors_have_insurance"><option value="">Select...</option><option value="Yes">Yes</option><option value="No">No</option></select>
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">What percent of your subcontractors have insurance?</label>
+          <input type="number" name="percent_subcontractors_insured">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Do you need coverage for uninsured subcontractors?</label>
+          <select name="coverage_for_uninsured_subcontractors"><option value="">Select...</option><option value="Yes">Yes</option><option value="No">No</option></select>
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Coverages requested (checkboxes)</label>
+          <label style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:1rem"><input type="checkbox" name="coverage_types" value="General liability"><span>General liability</span></label>
+          <label style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:1rem"><input type="checkbox" name="coverage_types" value="Commercial auto"><span>Commercial auto</span></label>
+          <label style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:1rem"><input type="checkbox" name="coverage_types" value="Workers compensation"><span>Workers compensation</span></label>
+          <label style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:1rem"><input type="checkbox" name="coverage_types" value="Umbrella / excess"><span>Umbrella / excess</span></label>
+          <label style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:1rem"><input type="checkbox" name="coverage_types" value="Pollution liability"><span>Pollution liability</span></label>
+          <label style="display:inline-flex;align-items:center;gap:0.4rem;margin-right:1rem"><input type="checkbox" name="coverage_types" value="Professional liability"><span>Professional liability</span></label>
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Year business started</label>
+          <input type="number" name="year_business_started">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Description of business</label>
+          <textarea name="business_description" rows="3"></textarea>
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Class code 1 (+ % of operations)</label>
+          <input type="text" name="class_code_1">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Class code 2 (+ % of operations)</label>
+          <input type="text" name="class_code_2">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Class code 3 (+ % of operations)</label>
+          <input type="text" name="class_code_3">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Class code 4 (+ % of operations)</label>
+          <input type="text" name="class_code_4">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Class code 5 (+ % of operations)</label>
+          <input type="text" name="class_code_5">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Residential vs commercial split</label>
+          <input type="text" name="residential_vs_commercial">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">New construction vs existing / remodel</label>
+          <input type="text" name="new_vs_existing_construction">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">5 largest projects ever (description + dollar amount)</label>
+          <textarea name="largest_projects" rows="3"></textarea>
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Prior insurance carrier name</label>
+          <input type="text" name="prior_carrier_name">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Prior policy number</label>
+          <input type="text" name="prior_policy_number">
+        </div>
+        <div style="margin-bottom:1rem">
+          <label style="display:block;font-weight:bold;margin-bottom:0.4rem">Prior policy expiration date</label>
+          <input type="date" name="prior_policy_expiration">
+        </div>
+</form>
 
         <div class="success-msg" id="successMsg">
           <div class="success-icon">✅</div>
