@@ -199,6 +199,124 @@ export default function QuoteForm() {
           </button>
         )}
       </div>
-    </form>
+    
+        {/* complete contractor field set — forms-required-fields.json */}
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Street address</label>
+          <input type="text" name="street_address" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">City</label>
+          <input type="text" name="city" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">ZIP code</label>
+          <input type="text" name="zip" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Prior year gross sales</label>
+          <input type="text" name="prior_year_gross_sales" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Prior year subcontractor expenses</label>
+          <input type="text" name="prior_year_subcontractor_expenses" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Prior year employee count</label>
+          <input type="number" name="prior_year_employee_count" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Prior year employee payroll</label>
+          <input type="text" name="prior_year_employee_payroll" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Estimated gross sales (next 12 months)</label>
+          <input type="text" name="estimated_gross_sales" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Estimated subcontractor expenses (next 12 months)</label>
+          <input type="text" name="estimated_subcontractor_expenses" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Estimated employee count (year total)</label>
+          <input type="number" name="estimated_employee_count" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Estimated employee annual payroll</label>
+          <input type="text" name="estimated_employee_payroll" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Estimated material costs</label>
+          <input type="text" name="estimated_material_costs" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Do your subcontractors have insurance?</label>
+          <select name="subcontractors_have_insurance" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9"><option value="">Select...</option><option value="Yes">Yes</option><option value="No">No</option></select>
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">What percent of your subcontractors have insurance?</label>
+          <input type="number" name="percent_subcontractors_insured" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Do you need coverage for uninsured subcontractors?</label>
+          <select name="coverage_for_uninsured_subcontractors" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9"><option value="">Select...</option><option value="Yes">Yes</option><option value="No">No</option></select>
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Annual gross sales</label>
+          <input type="text" name="annual_gross_sales" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Year business started</label>
+          <input type="number" name="year_business_started" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Description of business</label>
+          <textarea name="business_description" rows={3} className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9"></textarea>
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Class code 1 (+ % of operations)</label>
+          <input type="text" name="class_code_1" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Class code 2 (+ % of operations)</label>
+          <input type="text" name="class_code_2" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Class code 3 (+ % of operations)</label>
+          <input type="text" name="class_code_3" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Class code 4 (+ % of operations)</label>
+          <input type="text" name="class_code_4" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Class code 5 (+ % of operations)</label>
+          <input type="text" name="class_code_5" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Residential vs commercial split</label>
+          <input type="text" name="residential_vs_commercial" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">New construction vs existing / remodel</label>
+          <input type="text" name="new_vs_existing_construction" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">5 largest projects ever (description + dollar amount)</label>
+          <textarea name="largest_projects" rows={3} className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9"></textarea>
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Prior insurance carrier name</label>
+          <input type="text" name="prior_carrier_name" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Prior policy number</label>
+          <input type="text" name="prior_policy_number" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-sm font-bold mb-1">Prior policy expiration date</label>
+          <input type="date" name="prior_policy_expiration" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
+        </div>
+</form>
   );
 }
