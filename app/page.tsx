@@ -4,7 +4,6 @@ import ServicesGrid from "@/components/sections/ServicesGrid";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import HowItWorks from "@/components/sections/HowItWorks";
 import Stats from "@/components/sections/Stats";
-import Testimonials from "@/components/sections/Testimonials";
 import StatesMap from "@/components/sections/StatesMap";
 import FAQ from "@/components/sections/FAQ";
 import { HOME_FAQS } from "@/lib/faqs";
@@ -33,7 +32,6 @@ export default function Home() {
       <WhyChooseUs />
       <HowItWorks />
       <Stats />
-      <Testimonials />
       <StatesMap />
       <FAQ />
       <CTABand />
