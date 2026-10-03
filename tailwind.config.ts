@@ -28,7 +28,6 @@ const config: Config = {
         heading: ["var(--font-sora)", "system-ui", "sans-serif"],
       },
       backgroundImage: {
-        "diagonal-band": "linear-gradient(135deg, #1B4F72 0%, #143A56 100%)",
         "amber-band": "linear-gradient(135deg, #E67E22 0%, #CA6B17 100%)",
       },
       boxShadow: {

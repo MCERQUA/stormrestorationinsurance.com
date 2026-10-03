@@ -13,7 +13,7 @@ export const SITE = {
   phoneRaw: "8449675247",
   phonePretty: "844-WORK-5247",
   email: "josh@contractorschoiceagency.com",
-  address: "12220 E Riggs Road Suite #105",
+  address: "12220 E Riggs Rd, Suite #104",
   city: "Chandler",
   state: "AZ",
   zip: "85249",

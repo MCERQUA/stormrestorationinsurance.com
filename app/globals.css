@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .dot-pattern {
     background-image: radial-gradient(
-      rgba(27, 79, 114, 0.12) 1px,
+      rgba(0, 0, 0, 0.08) 1px,
       transparent 1px
     );
     background-size: 22px 22px;

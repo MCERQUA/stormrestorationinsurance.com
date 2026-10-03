@@ -7,7 +7,7 @@ import { SITE } from "@/lib/utils";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-storm-navy pt-28 pb-24 text-white lg:pt-36 lg:pb-32">
-      <div className="absolute inset-0 bg-gradient-to-br from-storm-navy via-storm-navy to-storm-navy-dark" />
+      <div className="absolute inset-0 bg-storm-navy" />
       <div className="absolute inset-0 dot-pattern-light opacity-60" />
       <div
         className="absolute right-0 top-0 hidden h-full w-1/2 lg:block"
@@ -21,7 +21,7 @@ export default function Hero() {
           className="object-cover"
           sizes="50vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-storm-navy via-storm-navy/40 to-transparent" />
+        <div className="absolute inset-0 bg-storm-navy/40" />
       </div>
 
       <div className="container-x relative z-10 grid items-center gap-10 lg:grid-cols-2">
