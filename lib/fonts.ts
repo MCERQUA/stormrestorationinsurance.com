@@ -1,15 +1,23 @@
-import { Sora, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 
-export const sora = Sora({
-  subsets: ["latin"],
+export const sora = localFont({
+  src: [
+    { path: "./fonts/Sora-variable.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/Sora-variable.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/Sora-variable.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/Sora-variable.woff2", weight: "800", style: "normal" },
+  ],
   variable: "--font-sora",
   display: "swap",
-  weight: ["500", "600", "700", "800"],
 });
 
-export const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
+export const jakarta = localFont({
+  src: [
+    { path: "./fonts/PlusJakartaSans-variable.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/PlusJakartaSans-variable.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/PlusJakartaSans-variable.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/PlusJakartaSans-variable.woff2", weight: "700", style: "normal" },
+  ],
   variable: "--font-jakarta",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
