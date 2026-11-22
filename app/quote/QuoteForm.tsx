@@ -310,10 +310,6 @@ export default function QuoteForm() {
           <input type="text" name="prior_carrier_name" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-bold mb-1">Prior policy number</label>
-          <input type="text" name="prior_policy_number" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
-        </div>
-        <div className="mb-4">
           <label className="block text-sm font-bold mb-1">Prior policy expiration date</label>
           <input type="date" name="prior_policy_expiration" className="rounded-2xl border border-storm-cloud bg-white p-6 shadow-card sm:p-9" />
         </div>
